@@ -1,0 +1,22 @@
+{
+    "Extract_Data": {
+        "duration": 2,
+        "depends_on": []
+    },
+    "Transform_A": {
+        "duration": 3,
+        "depends_on": ["Extract_Data"]
+    },
+    "Transform_B": {
+        "duration": 2,
+        "depends_on": ["Extract_Data"]
+    },
+    "Load_Data": {
+        "duration": 1,
+        "depends_on": ["Transform_A", "Transform_B"]
+    },
+    "Notify_Users": {
+        "duration": 1,
+        "depends_on": ["Load_Data"]
+    }
+}
